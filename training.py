@@ -353,7 +353,6 @@ with torch.no_grad():
 print(f"  Entrada  SRC : {sample_src.shape}")
 print(f"  Entrada  TGT : {sample_tgt.shape}")
 print(f"  Saída logits : {out.shape}   (esperado: [2, {MAX_LEN}, {VOCAB_SIZE}])")
-assert out.shape == (2, MAX_LEN, VOCAB_SIZE), "Shape inesperado!"
-print("  ✓ Fluxo de tensores validado com sucesso.")
-print(f"  ✓ Loss final ({loss_history[-1]:.4f}) < Loss inicial ({loss_history[0]:.4f})")
-assert loss_history[-1] < loss_history[0], "AVISO: Loss não diminuiu!"
+assert out.shape == (2, MAX_LEN, VOCAB_SIZE)
+print(f"Loss final ({loss_history[-1]:.4f}) < Loss inicial ({loss_history[0]:.4f})")
+assert loss_history[-1] < loss_history[0]
