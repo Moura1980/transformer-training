@@ -1,6 +1,6 @@
 🚀 Como rodar
 
-pip install torch transformers datasets
+pip install torch transformers datasets<br>
 python main.py
 
 Ferramentas de IA utilizadas:
